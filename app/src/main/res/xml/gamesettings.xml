@@ -1,0 +1,47 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Spillet">
+
+        <EditTextPreference
+            android:key="playerNameInput"
+            android:title="Navn på spiller"
+            android:summary="Spillerens navn som gemmes på highscore listen"
+            android:dialogTitle="Indtast navn på spiller" />
+
+        <SwitchPreference
+            android:key="soundEffectsSwitch"
+            android:title="Lydeffekter"
+            android:summary="Indstilling af lydeffekter" />
+
+        <Preference
+            android:title="Regler"
+            android:summary="Læs om galgeleg spillets regler."
+            android:key="rulesScreen">
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Visning">
+
+        <Preference
+            android:title="Slet highscore"
+            android:summary="Sletter nuværende highscore liste"
+            android:key="deleteHighScore">
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Om appen">
+
+        <Preference
+            android:title="Om"
+            android:summary="Om galgeleg spillets udvikler."
+            android:key="aboutScreen">
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
