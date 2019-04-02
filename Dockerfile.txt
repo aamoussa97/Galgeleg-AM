@@ -1,0 +1,23 @@
+FROM gradle:5.2.1 AS builder
+
+ENV GRADLE_USER_HOME=/home/gradle/src
+WORKDIR /home/gradle/src
+
+COPY . .
+
+USER root
+RUN chown -R gradle /home/gradle/src
+USER gradle
+
+RUN gradle server:jar
+
+
+FROM openjdk:11.0
+
+WORKDIR /opt/app
+COPY --from=builder /home/gradle/src/server/build/libs/*.jar .
+
+VOLUME /opt/app/db
+EXPOSE 7000
+
+CMD java -jar *.jar
