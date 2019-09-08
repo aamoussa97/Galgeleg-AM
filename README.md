@@ -1,5 +1,5 @@
 # Galgeleg-AM
-Created an Android application hangman-game, written in Java for course: [62550 User experience and mobile application development](https://kurser.dtu.dk/course/62550).
+Created an Android application hangman-game, written in Java, for course [62550 User experience and mobile application development](https://kurser.dtu.dk/course/62550).
 
 # What I Learned
 * Activities - Android Views.
